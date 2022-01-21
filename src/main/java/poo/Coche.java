@@ -45,7 +45,7 @@ public class Coche {
     public String getAsientos(){
         String asientos;
         if(asientos_cuero){
-            asientos="con asientos de cuero";
+            asientos=" con asientos de cuero";
         }
         else
         {
@@ -71,18 +71,28 @@ public class Coche {
         if(climatizador){
             this.peso_total += 20;
         }
-        return(" peso total de " + this.peso_total);
+        return(" peso total de " + this.peso_total + " kg");
     }
-    
+    public String getClimatizador(){
+        String climatz;
+        if(this.climatizador){
+            climatz = " con climatizador";
+        }
+        else{
+            climatz = " sin climatizador";
+        }
+        return climatz;   
+    }
     public void setClimatizador(String climatz){
         if(climatz.equalsIgnoreCase("si")){
             this.climatizador = true;
         }
         else if(climatz.equalsIgnoreCase("no")){
-            this.climatizador = true;
+            this.climatizador = false;
         }        
     }
     public String getDatos(){
-        return ("Coche con: " + getRuedas() + getColor() + getAsientos() + getPeso());
+        return ("Coche con: " + getRuedas() + getColor() + getAsientos() + getPeso()
+                + "\n" + getClimatizador());
     }
 }
