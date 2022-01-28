@@ -8,7 +8,7 @@ package poo;
  *
  * @author Alumno Tarde
  */
-public class Coche {
+public class Vehiculo {
     private int ruedas;
     private int largo;
     private int ancho;
@@ -18,7 +18,7 @@ public class Coche {
     private int peso_total;
     private boolean asientos_cuero;
     private boolean climatizador;
-    public Coche() {
+    public Vehiculo() {
         ruedas=4;
         largo=2000;
         ancho=250;
